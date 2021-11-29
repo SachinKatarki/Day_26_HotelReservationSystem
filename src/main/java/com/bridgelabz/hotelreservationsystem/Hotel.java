@@ -2,7 +2,7 @@ package com.bridgelabz.hotelreservationsystem;
 
 public class Hotel {
 	
-	  private String name;
+	   private String name;
 	    private int regularWeekdayRate;
 	    private int regularWeekendRate;
 	    private int rewardsWeekdayRate;
@@ -79,7 +79,4 @@ public class Hotel {
 	    {
 	        this.rating = rating;
 	    }
-
-
-
 }
