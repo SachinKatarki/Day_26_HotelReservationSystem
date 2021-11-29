@@ -11,7 +11,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class HotelReservation{
 	 private List<Hotel> hotels;
 
@@ -96,5 +95,4 @@ public class HotelReservation{
 	        LocalDate localDate = LocalDate.parse(date, formatter);
 	        return localDate;
 	    }
-   
 }

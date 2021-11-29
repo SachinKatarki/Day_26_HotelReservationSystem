@@ -1,12 +1,14 @@
 package com.bridgelabz.hotelreservationsystem;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class HotelReservationTest {
 	  @Test
@@ -25,8 +27,7 @@ public class HotelReservationTest {
 	    }
 
 	    @Test
-	    public void whenGivenDateRangeShouldReturnCheapestHotel() //given date range should return cheapest hotel.
-	    {
+	    public void whenGivenDateRangeShouldReturnCheapestHotel() {
 	        Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
 	        Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
 	        Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
@@ -40,8 +41,7 @@ public class HotelReservationTest {
 	    }
 
 	    @Test
-	    public void whenGivenHotelAddedShouldAddWeekendPrices() // given hotel should add weekend prices.
-	    {
+	    public void whenGivenHotelAddedShouldAddWeekendPrices() {
 	        Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
 	        Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
 	        Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
@@ -56,8 +56,7 @@ public class HotelReservationTest {
 	    }
 
 	    @Test
-	    public void whenGivenDateRangeShouldReturnCheapestHotels() //given date range should return cheapest hotels.
-	    {
+	    public void whenGivenDateRangeShouldReturnCheapestHotels() {
 	        Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
 	        Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 110, 50, 4);
 	        Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
@@ -69,9 +68,9 @@ public class HotelReservationTest {
 	        result.forEach((k, v) -> System.out.println(k.getName() + " " + v));
 	        assertNotNull(result);
 	    }
+
 	    @Test
-	    public void whenHotelAddedToSystemRatingShouldGetAdded() // rating to the hotel.
-	    {
+	    public void whenHotelAddedToSystemRatingShouldGetAdded() {
 	        Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
 	        Hotel hotel2 = new Hotel("Bridgewood", 160, 60, 110, 50, 4);
 	        Hotel hotel3 = new Hotel("Ridgewood", 220, 150, 100, 40, 5);
@@ -84,8 +83,9 @@ public class HotelReservationTest {
 	                && hotelList.get(2).getRating() == 5;
 	        assertTrue(result);
 	    }
+
 	    @Test
-	    public void whenGivenDateRange_ShouldReturn_CheapestBestRatedHotels() // cheapest best rated hotels.
+	    public void whenGivenDateRangeShouldReturnCheapestBestRatedHotels() //best rated hotel.
 	    {
 	        Hotel hotel1 = new Hotel("Lakewood", 110, 90, 80, 80, 3);
 	        Hotel hotel2 = new Hotel("Bridgewood", 150, 50, 110, 50, 4);
@@ -99,4 +99,5 @@ public class HotelReservationTest {
 	                (k, v) -> System.out.println(k.getName() + ", Rating : " + k.getRating() + " and Total Rate " + v));
 	        assertNotNull(result);
 	    }
-}
+	}
+
