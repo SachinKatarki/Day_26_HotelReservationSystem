@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class HotelReservation{
-	   private List<Hotel> hotels;
+	 private List<Hotel> hotels;
 
 	    public HotelReservation() {
 	        this.hotels = new ArrayList<Hotel>();
